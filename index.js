@@ -12,6 +12,6 @@ app.use('/graphql-pets', graphqlHTTP({
 }))
 
 
-app.listen(3001, ()=> {
-  console.log("Listening for requests on port 3001")
+server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
+  console.log(`🚀 Server ready at ${url}`);
 });
